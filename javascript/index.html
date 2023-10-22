@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+    <!--Exercicio 1-->
+    <h3>Exercicio 1</h3>
+    <div class="col-md-3 mt-3">
+        <button class="btn btn-danger" onclick="operacao()">
+        Calcular</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>   
+        function operacao (){
+            let valor1 = 10;
+            let valor2 = 100;
+            let soma;
+            let subtrai;
+            let multiplica;
+            let divide;
+
+            soma = valor1 + valor2;
+            subtrai = valor1 - valor2;
+            multiplica = valor1 * valor2;
+            divide = valor1 / valor2;
+
+            alert("Resultado:\n Soma: " + soma + "\n Subtração: " + subtrai + "\n Multiplicação: " + multiplica + "\n Divisão: " + divide);
+
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+
+     <!--Exercicio 2-->
+     <h3>Exercicio 2</h3>
+     <div class="col-md-3 mt-3">
+         <button class="btn btn-danger" onclick="loop2()">
+         Exibir</button>
+     </div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+     <script>   
+         function loop2 (){
+             let valor = 10;
+             let exibicao = "";
+ 
+             for (valor; valor < 101; valor++){
+                exibicao = exibicao + valor.toString() + ", ";
+             }
+             alert(exibicao);
+  
+         }
+     </script>
+     <br>
+     <br>
+     <br>
+
+    <!--Exercicio 3-->
+
+     <h3>Exercicio 3</h3>
+     <div class="col-md-3 mt-3">
+         <button class="btn btn-danger" onclick="loop3()">
+         Exibir tabuada</button>
+     </div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+     <script>   
+         function loop3 (){
+             let num5 = 5;
+             let resultado = 0;
+             let exibicao5 = "";
+             let valor5 = 0;
+
+            for (valor5; valor5 < 11; valor5++){
+            resultado = num5 * valor5;
+            exibicao5 = exibicao5 + num5 + " x " + valor5 + " = " + resultado + "\n";
+            }
+             alert(exibicao5);
+
+        }
+    </script>
+<br>
+<br>
+<br>
+
+    <!--Exercicio 4-->
+
+    <h3>Exercicio 4</h3>
+    <div class="col-md-3 mt-3">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Digite um valor</label>
+            <input type="email" class="form-control" id="numero">
+        </div>   
+        <button class="btn btn-danger" onclick="loop4()">
+        Exibir tabuada</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>   
+        function loop4 (){
+            let numero = parseFloat(
+            document.getElementById("numero").value);
+            let calculo = 0;
+            let exibindo = "";
+            let valores = 0;
+
+           for (valores; valores < 11; valores++){
+           calculo = numero * valores;
+           exibindo = exibindo + numero + " x " + valores + " = " + calculo + "\n";
+           }
+            alert(exibindo);
+
+       }
+   </script>
+<br>
+<br>
+<br>
+
+    <!--Exercicio 5-->
+    <h3>Exercicio 5</h3>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Num. 1</label>
+                <input type="email" class="form-control" id="num1">
+        </div>   
+        </div>
+        <div class="col-md-3">            <label class="form-label">Operacao</label>
+            <select class="form-select" id="operacao">
+                <option value="+" selected>Somar</option>
+                <option value="-">Subtrair</option>
+                <option value="*">Multiplicar</option>
+                <option value="/">Dividir</option>
+              </select></div>
+        <div class="col-md-3">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Num. 2</label>
+                <input type="email" class="form-control" id="num2">
+        </div>
+          </div></div>
+
+        <div class="col-md-3 mt-3">
+            <button class="btn btn-danger" onclick="calcular()">
+            Calcular</button>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Resultado</label>
+                <input type="email" class="form-control" id="resultado">
+        </div>
+          </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+    function calcular (){
+        let num1 = parseFloat(
+        document.getElementById("num1").value);
+        let num2 = parseFloat(
+        document.getElementById("num2").value);
+        let operacao = document.getElementById("operacao").value;
+        let resultado;
+        switch(operacao){
+            case '+':
+            resultado =
+            num1 + num2;
+            break;
+            case '-':
+            resultado =
+            num1 - num2;
+            break;
+            case '*':
+            resultado =
+            num1 * num2;
+            break;
+            case '/':
+            resultado =
+            num1 / num2;
+            break;
+            
+        }
+        document.getElementById("resultado").value = resultado;
+
+    }
+    function botaoOkClique(){
+        let nome = document.getElementById("txtNome").value;
+        document.getElementById ("txtNome2").value = nome;
+
+        let conteiner = document.getElementsById("teste");
+        container.style.background = "green";
+
+    }
+    console.log("Imprime no console...");
+</script>
+<br>
+<br>
+<br>
+
+<!--Exercicio 6-->
+<h3>Exercicio 6</h3>
+<div class="col-md-3 mt-3">
+    <button class="btn btn-danger" onclick="loop6()">
+    Exibir valores pares</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>   
+    function loop6 (){
+        var listaNum = [1,2,3,4,5,6,7,8,9,10];
+        let posicao = 0;
+        let exibicao1 = "";
+
+        for (listaNum[posicao]; posicao < listaNum.length; posicao++){
+            if(listaNum[posicao]%2 == 0){
+	            exibicao1 = exibicao1 + listaNum[posicao] + ", ";
+            }
+           
+        }
+        alert(exibicao1);
+
+    }
+</script>
+<br>
+<br>
+<br>
+
+<!--Exercicio 7-->
+<h3>Exercicio 7</h3>
+<div class="row">
+    <div class="col-md-3">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Custo de fabrica</label>
+            <input type="email" class="form-control" id="custoFabrica">
+        </div>   
+    </div>
+    <div class="col-md-3">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">% do distribuidor</label>
+            <input type="email" class="form-control" id="percDistribuidor">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">% de impostos</label>
+            <input type="email" class="form-control" id="percImpostos">
+        </div>
+    </div>
+</div>
+
+    <div class="col-md-3 mt-3">
+        <button class="btn btn-danger" onclick="calcular7()">
+        Calcular</button>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Valor final</label>
+            <input type="email" class="form-control" id="valorfinal">
+    </div>
+      </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+function calcular7 (){
+    let custoFabrica = parseFloat(
+    document.getElementById("custoFabrica").value);
+    let percDistribuidor = parseFloat(
+    document.getElementById("percDistribuidor").value);
+    let percImpostos = parseFloat(
+    document.getElementById("percImpostos").value);
+    let valorfinal;
+
+    valorfinal = custoFabrica + (custoFabrica * percDistribuidor) + (custoFabrica * percDistribuidor)
+    document.getElementById("valorfinal").value = valorfinal;
+
+}
+</script>
+<br>
+<br>
+<br>
+
+</body>
+</html>
